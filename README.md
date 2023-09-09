@@ -1,11 +1,11 @@
 # VR Class Project - Group x
 ## **Project Created By:** 
-_, , , and _
+Evan Lin, Anik Singha, Adrian Mysliwiec, Josiel Perez
 
 ## About:
 Summary here
 
->### Engine: [Unity Version 2021.3.9f1](https://unity3d.com/get-unity/download/archive)
+>### Engine: [Unity 2022.3.8f1](https://unity3d.com/get-unity/download/archive)
 >### Features:
 >### Goals:
 
@@ -13,11 +13,11 @@ Summary here
 
 ### **Headset Used for Testing:** [Oculus Quest 2](https://www.meta.com/quest/products/quest-2/?utm_source=www.google.com&utm_medium=oculusredirect)
 
-### ____ Scene: 
+### Office Scene: Josiel Perez
 > Link to assets here
-### ____ Scene: 
+### Warehouse Scene: Evan Lin
 > Link to assets here
-### ____ Scene: 
+### Basement Scene: Adrian Mysliwiec
 >Link to assets here
-### ____ Scene: 
+### Maze Scene: Anik Singha
 >Link to assets here
