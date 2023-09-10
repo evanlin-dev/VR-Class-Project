@@ -1,4 +1,4 @@
-# VR Class Project - Group x
+# VR Class Project - Group 6
 ## **Project Created By:** 
 Evan Lin, Anik Singha, Adrian Mysliwiec, Josiel Perez
 
