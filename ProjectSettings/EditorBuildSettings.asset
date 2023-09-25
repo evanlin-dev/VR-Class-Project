@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/WarehouseLevel.unity
     guid: e74c2eaa77c4630469f8c3f79a146bab
   - enabled: 1
-    path: Assets/Scenes/BasementLEvel.unity
+    path: Assets/Scenes/BasementLevel.unity
     guid: 6a06506eb5bec3b41a86d448e1fa68df
   - enabled: 1
     path: Assets/Scenes/MazeLevel.unity
