@@ -1689,6 +1689,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2761784063978902504, guid: 20cd430e4176b8a41beacd5c01baca08, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761784063978902504, guid: 20cd430e4176b8a41beacd5c01baca08, type: 3}
       propertyPath: m_Parameters.numCornerVertices
       value: 4
       objectReference: {fileID: 0}
@@ -2099,6 +2103,10 @@ PrefabInstance:
     - target: {fileID: 2761784063978902504, guid: 20cd430e4176b8a41beacd5c01baca08, type: 3}
       propertyPath: m_Parameters.numCapVertices
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761784063978902504, guid: 20cd430e4176b8a41beacd5c01baca08, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2761784063978902504, guid: 20cd430e4176b8a41beacd5c01baca08, type: 3}
       propertyPath: m_Parameters.numCornerVertices
@@ -2714,6 +2722,10 @@ PrefabInstance:
       propertyPath: m_RayOriginTransform
       value: 
       objectReference: {fileID: 716906830792148215}
+    - target: {fileID: 7693184380767619946, guid: 7d243ee99508e2443b7ca3e1a1c66788, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.005
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2803,6 +2815,10 @@ PrefabInstance:
       propertyPath: m_RayOriginTransform
       value: 
       objectReference: {fileID: 8718302446126152263}
+    - target: {fileID: 7693184380767619946, guid: 7d243ee99508e2443b7ca3e1a1c66788, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.005
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
