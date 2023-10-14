@@ -11,11 +11,11 @@ public class EnemyController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
-private void Update()
-{
-    // Debug.Log("Player Position: " + player.position);
-    // Debug.Log("Agent Destination: " + agent.destination);
-    agent.SetDestination(player.position);
-}
+    private void Update()
+    {
+        // Debug.Log("Player Position: " + player.position);
+        // Debug.Log("Agent Destination: " + agent.destination);
+        agent.SetDestination(player.position);
+    }
 
 }
