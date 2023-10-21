@@ -8,6 +8,11 @@ public class EnemyController : MonoBehaviour
     public float detectionRange = 1f;
     private Animation animation;
     private bool isAttacking = false;
+    public AudioSource heartbeatAudioSource;
+    public float minDistance = 2f;
+    public float maxDistance = 10f;
+    public AnimationCurve pitchCurve;
+    public AnimationCurve volumeCurve;
 
     private void Start()
     {
@@ -23,21 +28,37 @@ public class EnemyController : MonoBehaviour
         // Calculate the distance between the enemy and the player.
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        // Check if the player is within the detection range.
+        float t = Mathf.InverseLerp(minDistance, maxDistance, distanceToPlayer);
+        float pitch = pitchCurve.Evaluate(t);
+        float volume = volumeCurve.Evaluate(t);
+
+        // Set the pitch and volume of the heartbeat sound.
+        heartbeatAudioSource.pitch = pitch;
+        heartbeatAudioSource.volume = volume;
+
+        // Play or stop the heartbeat sound based on distance.
+        if (distanceToPlayer <= maxDistance)
+        {
+            if (!heartbeatAudioSource.isPlaying)
+            {
+                heartbeatAudioSource.Play();
+            }
+        }
+        else
+        {
+            if (heartbeatAudioSource.isPlaying)
+            {
+                heartbeatAudioSource.Stop();
+            }
+        }
+
+        // Handle animations as needed.
         if (distanceToPlayer <= detectionRange)
         {
-            // Player is in range. Choose between animations randomly.
             float randomValue = Random.Range(0f, 1f);
-            if (randomValue < 0.5f) {
-                // Crossfade to the "Attack1" animation with a smooth transition
-                animation.CrossFade("Attack1", 1f);
-            }
-            else {
-                // Crossfade to the "Attack2" animation with a smooth transition
-                animation.CrossFade("Attack2", 1f);
-            }
+            string animationName = (randomValue < 0.5f) ? "Attack1" : "Attack2";
+            animation.CrossFade(animationName, 1f);
 
-            // You can add attack behavior here (e.g., dealing damage to the player).
             if (!isAttacking)
             {
                 isAttacking = true;
@@ -46,7 +67,6 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            // Player is out of range. Stop the attack animation.
             animation.CrossFade("Run", 1f);
 
             // Reset the attack state.
