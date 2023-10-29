@@ -127,6 +127,11 @@
                 "value": "{\"m_Value\":true}"
             },
             {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "editor.stripProBuilderScriptsOnBuild",
+                "value": "{\"m_Value\":true}"
+            },
+            {
                 "type": "UnityEngine.ProBuilder.RectSelectMode, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "editor.dragSelectRectMode",
                 "value": "{\"m_Value\":1}"
@@ -179,7 +184,7 @@
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize",
-                "value": "{\"m_Value\":{\"x\":56.0,\"y\":0.0,\"z\":63.0}}"
+                "value": "{\"m_Value\":{\"x\":-3.5254745483398439,\"y\":0.02531719207763672,\"z\":-12.4681396484375}}"
             },
             {
                 "type": "UnityEngine.Quaternion, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
