@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.31386566, g: 0.5504396, b: 0.82168245, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -312,7 +312,6 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
-  monster: {fileID: 0}
 --- !u!114 &142898992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,7 +467,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -1217,7 +1217,6 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
-  monster: {fileID: 0}
 --- !u!114 &582210556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1445,7 +1444,6 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
-  monster: {fileID: 0}
 --- !u!114 &676992282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1811,7 +1809,6 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
-  monster: {fileID: 0}
 --- !u!114 &791719173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2083,7 +2080,6 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
-  monster: {fileID: 0}
 --- !u!114 &1100733362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2239,7 +2235,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -2461,7 +2458,6 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
-  monster: {fileID: 0}
 --- !u!1 &1249617917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,7 +2780,6 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
-  monster: {fileID: 0}
 --- !u!114 &1405539503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2940,7 +2935,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -3202,7 +3198,6 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
-  monster: {fileID: 0}
 --- !u!114 &1560328258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3819,7 +3814,6 @@ MonoBehaviour:
   mainCanvas: {fileID: 0}
   sceneListCanvas: {fileID: 0}
   guideCanvas: {fileID: 0}
-  monster: {fileID: 0}
 --- !u!114 &2002863916
 MonoBehaviour:
   m_ObjectHideFlags: 0
