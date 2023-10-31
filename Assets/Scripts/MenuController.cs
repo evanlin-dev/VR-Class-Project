@@ -9,6 +9,7 @@ public class MenuController : MonoBehaviour
     public Canvas mainCanvas;
     public Canvas sceneListCanvas;
     public Canvas guideCanvas;
+    public GameObject monster;
 
     public void ShowScenesCanvas()
     {
@@ -52,5 +53,11 @@ public class MenuController : MonoBehaviour
     public void LoadMazeLevel()
     {
         SceneManager.LoadScene("MazeLevel");
+    }
+
+    public void Spawn()
+    {   
+        gameObject.active = false;
+        monster.active = true;
     }
 }

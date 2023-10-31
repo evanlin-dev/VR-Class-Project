@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.31285363, g: 0.55013007, b: 0.8221572, a: 1}
+  m_IndirectSpecularColor: {r: 0.31386566, g: 0.5504396, b: 0.82168245, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -312,6 +312,7 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
+  monster: {fileID: 0}
 --- !u!114 &142898992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,6 +807,7 @@ GameObject:
   - component: {fileID: 421935647}
   - component: {fileID: 421935646}
   - component: {fileID: 421935645}
+  - component: {fileID: 421935649}
   m_Layer: 5
   m_Name: MainMenuCanvas
   m_TagString: Untagged
@@ -896,6 +898,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 3.03}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &421935649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421935644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1001 &452463679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -904,6 +925,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3127728408163665758, guid: 761f95e346f87b44c819fcc6f2d9b294, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4134505312059479865, guid: 761f95e346f87b44c819fcc6f2d9b294, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -914,7 +939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4134505312059479865, guid: 761f95e346f87b44c819fcc6f2d9b294, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4134505312059479865, guid: 761f95e346f87b44c819fcc6f2d9b294, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1192,6 +1217,7 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
+  monster: {fileID: 0}
 --- !u!114 &582210556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1419,6 +1445,7 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
+  monster: {fileID: 0}
 --- !u!114 &676992282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1784,6 +1811,7 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
+  monster: {fileID: 0}
 --- !u!114 &791719173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1890,6 +1918,7 @@ GameObject:
   - component: {fileID: 1054928162}
   - component: {fileID: 1054928161}
   - component: {fileID: 1054928160}
+  - component: {fileID: 1054928164}
   m_Layer: 5
   m_Name: LevelMenuCanvas
   m_TagString: Untagged
@@ -1980,6 +2009,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 3.03}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1054928164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054928159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &1100733359
 GameObject:
   m_ObjectHideFlags: 0
@@ -2035,6 +2083,7 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
+  monster: {fileID: 0}
 --- !u!114 &1100733362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2412,6 +2461,7 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
+  monster: {fileID: 0}
 --- !u!1 &1249617917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2423,8 +2473,8 @@ GameObject:
   - component: {fileID: 1249617921}
   - component: {fileID: 1249617920}
   - component: {fileID: 1249617919}
-  - component: {fileID: 1249617918}
   - component: {fileID: 1249617922}
+  - component: {fileID: 1249617923}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -2432,28 +2482,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &1249617918
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249617917}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1249617919
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2514,7 +2542,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1.6032, y: 1.6032, z: 1.6032}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2630,6 +2658,28 @@ MonoBehaviour:
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
+--- !u!64 &1249617923
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249617917}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1334535996 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9014170783809206332, guid: 761f95e346f87b44c819fcc6f2d9b294, type: 3}
@@ -2734,6 +2784,7 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
+  monster: {fileID: 0}
 --- !u!114 &1405539503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3151,6 +3202,7 @@ MonoBehaviour:
   mainCanvas: {fileID: 421935647}
   sceneListCanvas: {fileID: 1054928162}
   guideCanvas: {fileID: 1918454270}
+  monster: {fileID: 0}
 --- !u!114 &1560328258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3468,6 +3520,7 @@ GameObject:
   - component: {fileID: 1918454270}
   - component: {fileID: 1918454272}
   - component: {fileID: 1918454271}
+  - component: {fileID: 1918454274}
   m_Layer: 5
   m_Name: GuideMenuCanvas
   m_TagString: Untagged
@@ -3558,6 +3611,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 3.03}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1918454274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918454269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &1925564060
 GameObject:
   m_ObjectHideFlags: 0
@@ -3747,6 +3819,7 @@ MonoBehaviour:
   mainCanvas: {fileID: 0}
   sceneListCanvas: {fileID: 0}
   guideCanvas: {fileID: 0}
+  monster: {fileID: 0}
 --- !u!114 &2002863916
 MonoBehaviour:
   m_ObjectHideFlags: 0
