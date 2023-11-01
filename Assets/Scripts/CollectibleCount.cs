@@ -22,7 +22,7 @@ public class CollectibleCount : MonoBehaviour
     void OnCollectibleCollected()
     {
         text.text = (++count).ToString();
-        if (count >= 15)
+        if (count >= 1)
         {
             // When count reaches 15 or more, make the "Finish" object visible
             finishObject.SetActive(true);
