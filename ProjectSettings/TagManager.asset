@@ -12,11 +12,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - LeftHandPhysics
+  - RightHandPhysics
+  - NonePhysicsHandLayer
+  - Body
+  - GrabIgnoreRay
   - 
   - 
   - 
