@@ -15,8 +15,8 @@ TagManager:
   - LeftHandPhysics
   - RightHandPhysics
   - NonePhysicsHandLayer
-  - 
-  - 
+  - Body
+  - GrabIgnoreRay
   - 
   - 
   - 

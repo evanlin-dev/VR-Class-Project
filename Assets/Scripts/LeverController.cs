@@ -17,8 +17,8 @@ public class LeverController : MonoBehaviour
     void Start()
     {
         // Calculate the target positions for the doors
-        door1TargetPosition = door1.position + Vector3.right * doorSeparationDistance / 2f;
-        door2TargetPosition = door2.position - Vector3.right * doorSeparationDistance / 2f;
+        door1TargetPosition = door1.position + Vector3.forward * doorSeparationDistance / 2f;
+        door2TargetPosition = door2.position - Vector3.forward * doorSeparationDistance / 2f;
     }
 
     void Update()
