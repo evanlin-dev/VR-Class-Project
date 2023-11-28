@@ -535,7 +535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!82 &12783829
@@ -2240,7 +2240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 8300000, guid: c0e391351b242a14983c3aafada345be, type: 3}
   closeDoor: {fileID: 8300000, guid: b155d468ce3f6ca499d554f52afc6a7c, type: 3}
 --- !u!64 &67591742
@@ -11870,7 +11870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!1001 &434115679
@@ -14704,7 +14704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 0
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!1001 &532213456
@@ -15123,7 +15123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!82 &549665966
@@ -16635,7 +16635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!82 &605413104
@@ -22605,7 +22605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!1001 &799334069
@@ -26121,7 +26121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!82 &946971439
@@ -29410,7 +29410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!1001 &1038208392
@@ -33302,7 +33302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!64 &1193268862
@@ -36578,7 +36578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 8300000, guid: c0e391351b242a14983c3aafada345be, type: 3}
   closeDoor: {fileID: 8300000, guid: b155d468ce3f6ca499d554f52afc6a7c, type: 3}
 --- !u!1001 &1344137993
@@ -38150,7 +38150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 0
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!1001 &1410190549
@@ -40961,7 +40961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!82 &1487495424
@@ -41339,7 +41339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!1001 &1497840206
@@ -46239,7 +46239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!82 &1679464437
@@ -52046,7 +52046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!82 &1926704897
@@ -56503,7 +56503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 1.8
+  activationRange: 2.2
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!64 &2092030056
