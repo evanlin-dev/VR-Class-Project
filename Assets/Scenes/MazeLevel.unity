@@ -535,7 +535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 2
+  activationRange: 1.8
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!82 &12783829
@@ -2240,7 +2240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 2
+  activationRange: 1.8
   openDoor: {fileID: 8300000, guid: c0e391351b242a14983c3aafada345be, type: 3}
   closeDoor: {fileID: 8300000, guid: b155d468ce3f6ca499d554f52afc6a7c, type: 3}
 --- !u!64 &67591742
@@ -2739,7 +2739,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  displayTime: 3
+  displayTime: 30
   keyCanvas: {fileID: 1060390702}
   keyText: {fileID: 691920899}
 --- !u!1001 &73712848
@@ -6049,6 +6049,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 49264981179385684, guid: 30f988e060caa3540ba523322c05009c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 244819704277008725, guid: 30f988e060caa3540ba523322c05009c, type: 3}
       propertyPath: m_Name
       value: Office Lamp A
@@ -6934,6 +6938,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4039167207456525918, guid: 33ce9394fee881440af6a01c37ca45d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513522703272347735, guid: 33ce9394fee881440af6a01c37ca45d1, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7192934069875230085, guid: 33ce9394fee881440af6a01c37ca45d1, type: 3}
@@ -9671,11 +9679,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6507146629973954718, guid: 66c343ffcf8c1e54382b0630feca562f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99999994
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 6507146629973954718, guid: 66c343ffcf8c1e54382b0630feca562f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.5459332
+      value: 5.789
       objectReference: {fileID: 0}
     - target: {fileID: 6507146629973954718, guid: 66c343ffcf8c1e54382b0630feca562f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11862,7 +11870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 2
+  activationRange: 1.8
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!1001 &434115679
@@ -14551,13 +14559,13 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5438063203071105307, guid: 16d3b976106d561488ee6fef0113cc77, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 529695203}
-    - targetCorrespondingSourceObject: {fileID: 5438063203071105307, guid: 16d3b976106d561488ee6fef0113cc77, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 529695202}
     - targetCorrespondingSourceObject: {fileID: 5438063203071105307, guid: 16d3b976106d561488ee6fef0113cc77, type: 3}
       insertIndex: -1
       addedObject: {fileID: 529695201}
+    - targetCorrespondingSourceObject: {fileID: 5438063203071105307, guid: 16d3b976106d561488ee6fef0113cc77, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 529695207}
   m_SourcePrefab: {fileID: 100100000, guid: 16d3b976106d561488ee6fef0113cc77, type: 3}
 --- !u!1 &529695200 stripped
 GameObject:
@@ -14682,7 +14690,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2619086233303812490, guid: 05323b62e9a5c4f43bf94c451c70c99f, type: 3}
---- !u!114 &529695203
+--- !u!114 &529695207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14691,12 +14699,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 529695200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02afd6b9c255116439c56ebb731f26b3, type: 3}
+  m_Script: {fileID: 11500000, guid: c4fe2ad0238876845a710c9a7c73a6d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isOpen: 0
-  canActivate: 1
-  activationRange: 2
+  canActivate: 0
+  activationRange: 1.8
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!1001 &532213456
@@ -16627,7 +16635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 2
+  activationRange: 1.8
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!82 &605413104
@@ -18959,7 +18967,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 1, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &691920899
 MonoBehaviour:
@@ -18991,7 +18999,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.7194384, g: 0.7264151, b: 0.620194, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -19008,10 +19016,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 0.15
+  m_fontSizeBase: 0.15
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -22597,7 +22605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 2
+  activationRange: 1.8
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!1001 &799334069
@@ -26113,7 +26121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 2
+  activationRange: 1.8
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!82 &946971439
@@ -29402,7 +29410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 2
+  activationRange: 1.8
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!1001 &1038208392
@@ -30054,7 +30062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 5
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -30062,7 +30070,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1060390702
 Canvas:
   m_ObjectHideFlags: 0
@@ -30072,16 +30080,16 @@ Canvas:
   m_GameObject: {fileID: 1060390699}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 291267617}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 1
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: -1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -30093,19 +30101,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060390699}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 691920898}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 651, y: 331.5}
+  m_SizeDelta: {x: 2, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1060390704
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -33294,7 +33302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 2
+  activationRange: 1.8
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!64 &1193268862
@@ -36570,7 +36578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 2
+  activationRange: 1.8
   openDoor: {fileID: 8300000, guid: c0e391351b242a14983c3aafada345be, type: 3}
   closeDoor: {fileID: 8300000, guid: b155d468ce3f6ca499d554f52afc6a7c, type: 3}
 --- !u!1001 &1344137993
@@ -38142,7 +38150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 0
-  activationRange: 2
+  activationRange: 1.8
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!1001 &1410190549
@@ -38732,11 +38740,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6507146629973954718, guid: 66c343ffcf8c1e54382b0630feca562f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99999994
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 6507146629973954718, guid: 66c343ffcf8c1e54382b0630feca562f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.5459332
+      value: 5.806
       objectReference: {fileID: 0}
     - target: {fileID: 6507146629973954718, guid: 66c343ffcf8c1e54382b0630feca562f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -40953,7 +40961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 2
+  activationRange: 1.8
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!82 &1487495424
@@ -41331,7 +41339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 2
+  activationRange: 1.8
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!1001 &1497840206
@@ -46231,7 +46239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 2
+  activationRange: 1.8
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!82 &1679464437
@@ -49931,6 +49939,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8487767242233901681, guid: b97a6108f0685fa4e9e7ade950bed8b4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487767242233901681, guid: b97a6108f0685fa4e9e7ade950bed8b4, type: 3}
       propertyPath: m_FadeMode
       value: 1
       objectReference: {fileID: 0}
@@ -52034,7 +52046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 2
+  activationRange: 1.8
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!82 &1926704897
@@ -56491,7 +56503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   canActivate: 1
-  activationRange: 2
+  activationRange: 1.8
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!64 &2092030056

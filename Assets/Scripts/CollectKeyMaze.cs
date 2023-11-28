@@ -31,13 +31,17 @@ public class CollectKeyMaze : XRGrabInteractable
             // Hide the key
             gameObject.SetActive(false);
 
-            // Show the "Key collected" text
+            // Set the position of the canvas in front of the player
+            keyCanvas.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 1;
+
+            // Show the "Key collected" text in the middle of the screen
             keyText.text = "Key collected";
             keyCanvas.enabled = true;
 
             // Start the coroutine on the CoroutineRunner
             coroutineRunner.StartCoroutine(HideTextCoroutine());
         }
+
     }
 
     private class CoroutineRunner : MonoBehaviour { }
@@ -49,4 +53,6 @@ public class CollectKeyMaze : XRGrabInteractable
         // Hide the text after displayTime seconds
         keyCanvas.enabled = false;
     }
+
+    
 }
