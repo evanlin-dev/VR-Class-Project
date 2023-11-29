@@ -2,15 +2,13 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
 
-public class CollectKeyMaze : XRGrabInteractable
-{
+public class CollectKeyMaze : XRGrabInteractable {
     private bool isCollected = false;
     public float displayTime = 3f;
 
     public Canvas keyCanvas;
     public TextMeshProUGUI keyText;
 
-    // Create a separate MonoBehaviour to run coroutines
     private CoroutineRunner coroutineRunner;
 
     protected override void OnEnable()
@@ -34,14 +32,15 @@ public class CollectKeyMaze : XRGrabInteractable
             // Set the position of the canvas in front of the player
             keyCanvas.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 1;
 
-            // Show the "Key collected" text in the middle of the screen
+            // Make the canvas look at the player's camera
+            keyCanvas.transform.LookAt(Camera.main.transform.position);
+            keyCanvas.transform.Rotate(0, 180, 0);
+
             keyText.text = "Key collected";
             keyCanvas.enabled = true;
 
-            // Start the coroutine on the CoroutineRunner
             coroutineRunner.StartCoroutine(HideTextCoroutine());
         }
-
     }
 
     private class CoroutineRunner : MonoBehaviour { }
@@ -53,6 +52,4 @@ public class CollectKeyMaze : XRGrabInteractable
         // Hide the text after displayTime seconds
         keyCanvas.enabled = false;
     }
-
-    
 }

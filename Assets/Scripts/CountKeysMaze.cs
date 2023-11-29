@@ -36,7 +36,7 @@ public class CountKeysMaze : MonoBehaviour
         // Update the TextMeshPro text with the count of active keys
         if (activeKeyCount != 0)
         {
-            keyCountText.text = "Keys Left: " + activeKeyCount;
+            keyCountText.text = "Keys Left: " + (9 - activeKeyCount);
         } else {
             keyCountText.text = "Head to The Exit";
         }
