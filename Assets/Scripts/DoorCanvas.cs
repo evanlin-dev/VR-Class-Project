@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class CountKeysMaze : MonoBehaviour
+public class DoorCanvas : MonoBehaviour
 {
-    public TextMeshProUGUI keyCountText; // Reference to your TextMeshPro object
+    public TextMeshPro keyCountText; // Reference to your TextMeshPro object
     int activeKeyCount;
 
     void Update()
@@ -36,9 +36,9 @@ public class CountKeysMaze : MonoBehaviour
         // Update the TextMeshPro text with the count of active keys
         if (activeKeyCount != 0)
         {
-            keyCountText.text = "Keys Left: " + (activeKeyCount);
+            keyCountText.text = "Keys Left: " + activeKeyCount;
         } else {
-            keyCountText.text = "Head to The Exit";
+            keyCountText.text = "Basement unlocked!";
         }
     }
 }
