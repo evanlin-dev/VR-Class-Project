@@ -1,0 +1,7 @@
+Supports Unity 2019.4.35 and above
+Supports Universal RP 7.7.1
+
+To use this pack with URP follow next steps:
+1.Extract the URP.unitypackage file.
+2. Make sure that you use a Normal Qality encoding type for the lightmap (Edit > Project Settings > Player > Lightmap Encoding)
+3. Make sure that you use HDR for the post processing, which can be set in your render pipeline asset at the Post-porcessing section.

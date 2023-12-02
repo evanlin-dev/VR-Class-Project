@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;
 
 public class EnemyController : MonoBehaviour
 {
@@ -14,15 +15,22 @@ public class EnemyController : MonoBehaviour
     public AnimationCurve pitchCurve;
     public AnimationCurve volumeCurve;
 
+    private int maxHP;
+    private int hp;
+    public TextMeshProUGUI hpText;
+
     private void Start()
     {
         animation = GetComponent<Animation>();
         agent = GetComponent<NavMeshAgent>();
         agent.stoppingDistance = 0;
+        maxHP = 5;
+        hp = 5;
     }
 
     private void Update()
     {
+        UpdateHPText();
         agent.SetDestination(player.position);
 
         // Calculate the distance between the enemy and the player.
@@ -62,15 +70,18 @@ public class EnemyController : MonoBehaviour
             if (!isAttacking)
             {
                 isAttacking = true;
-                // Implement your attack logic here.
             }
         }
         else
         {
             animation.CrossFade("Run", 1f);
-
-            // Reset the attack state.
             isAttacking = false;
         }
     }
+
+    private void UpdateHPText()
+    {
+        hpText.text = "HP: " + hp.ToString() + "/" + maxHP.ToString();
+    }
+
 }

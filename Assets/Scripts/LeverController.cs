@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class LeverController : MonoBehaviour
 {
@@ -14,11 +15,21 @@ public class LeverController : MonoBehaviour
     private Vector3 door1TargetPosition;
     private Vector3 door2TargetPosition;
 
+    public AudioClip leverSound;
+    private AudioSource audioSource;
+    private bool playedSound;
+
+    private XRGrabInteractable grabInteractable;
+
     void Start()
     {
+        playedSound = false;
         // Calculate the target positions for the doors
+        grabInteractable = GetComponent<XRGrabInteractable>();
         door1TargetPosition = door1.position + Vector3.forward * doorSeparationDistance / 2f;
         door2TargetPosition = door2.position - Vector3.forward * doorSeparationDistance / 2f;
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = leverSound;
     }
 
     void Update()
@@ -29,6 +40,11 @@ public class LeverController : MonoBehaviour
         // Check if the hinge angle is greater than or equal to the specified angle (fully open)
         if (hingeAngle >= maxHingeAngle && !doorsOpened)
         {
+            if (!playedSound)
+            {
+                audioSource.PlayOneShot(leverSound);
+                playedSound = true;
+            }
             // Move the doors towards their target positions gradually
             door1.position = Vector3.MoveTowards(door1.position, door1TargetPosition, Time.deltaTime * doorOpenSpeed);
             door2.position = Vector3.MoveTowards(door2.position, door2TargetPosition, Time.deltaTime * doorOpenSpeed);
@@ -38,6 +54,10 @@ public class LeverController : MonoBehaviour
             {
                 // Prevent the doors from moving again
                 doorsOpened = true;
+                if (grabInteractable != null)
+                {
+                    grabInteractable.enabled = false;
+                }
             }
         }
         if (doorsOpened && door1 && door2)
