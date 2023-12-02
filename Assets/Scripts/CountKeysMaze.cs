@@ -38,7 +38,7 @@ public class CountKeysMaze : MonoBehaviour
         {
             keyCountText.text = "Keys Left: " + (activeKeyCount);
         } else {
-            keyCountText.text = "Head to The Exit";
+            keyCountText.text = "ESCAPE!";
         }
     }
 }
