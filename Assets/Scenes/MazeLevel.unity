@@ -2639,9 +2639,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 57693060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce5476abf0f539c4fa1caa0e8d0eeeb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 689cd32b3d1fa8b4893c2fe701f021e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+  isActive: 0
+  distanceFromCamera: 2
+  yOffset: 0
 --- !u!1001 &60808756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59610,9 +59614,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1584230746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce5476abf0f539c4fa1caa0e8d0eeeb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 689cd32b3d1fa8b4893c2fe701f021e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+  isActive: 0
+  distanceFromCamera: 2
+  yOffset: 0
 --- !u!1001 &1584781320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71602,9 +71610,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1943292709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce5476abf0f539c4fa1caa0e8d0eeeb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 689cd32b3d1fa8b4893c2fe701f021e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+  isActive: 0
+  distanceFromCamera: 2
+  yOffset: 0
 --- !u!1001 &1943661238
 PrefabInstance:
   m_ObjectHideFlags: 0
