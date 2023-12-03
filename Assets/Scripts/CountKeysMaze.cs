@@ -11,6 +11,10 @@ public class CountKeysMaze : MonoBehaviour
     void Update()
     {
         activeKeyCount = CountActiveKeys();
+        if (activeKeyCount == 0)
+        {
+            enabled = false;
+        }
         UpdateKeyCountText();
     }
 
@@ -38,7 +42,7 @@ public class CountKeysMaze : MonoBehaviour
         {
             keyCountText.text = "Keys Left: " + (activeKeyCount);
         } else {
-            keyCountText.text = "ESCAPE!";
+            keyCountText.text = "Escape!";
         }
     }
 }

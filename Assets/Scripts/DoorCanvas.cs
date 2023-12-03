@@ -38,7 +38,7 @@ public class DoorCanvas : MonoBehaviour
         {
             keyCountText.text = "Keys Left: " + activeKeyCount;
         } else {
-            keyCountText.text = "Door Unlocked";
+            keyCountText.text = "Door Open";
         }
     }
 }
