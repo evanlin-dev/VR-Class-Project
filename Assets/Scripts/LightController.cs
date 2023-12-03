@@ -4,18 +4,18 @@ using TMPro;
 
 public class LightController : MonoBehaviour
 {
-    public GameObject[] hingeObjects; // List of game objects with hinge joints
-    public GameObject lightsToEnable; // Lights to enable
-    public GameObject sunToEnable;    // Sun to enable
+    public GameObject[] hingeObjects;
+    public GameObject lightsToEnable;
+    public GameObject sunToEnable;
     public GameObject otherLights;
-    public Material skyboxMaterial1;   // Skybox material to switch to when the counter reaches a certain value
-    public Material skyboxMaterial2;   // Another Skybox material
+    public Material skyboxMaterial1;
+    public Material skyboxMaterial2;
 
     public TextMeshProUGUI counterText;
-    public float angleThreshold = 45f; // Angle threshold to trigger the counter
+    public float angleThreshold = 45f;
 
-    private bool[] leverCounted; // Array to keep track of whether each lever has been counted
-    private int counter = 0; // Counter to keep track of the number of objects exceeding the angle
+    private bool[] leverCounted;
+    private int counter = 0;
 
     private void Start()
     {
@@ -50,17 +50,15 @@ public class LightController : MonoBehaviour
 
             if (hingeJoint != null && !leverCounted[i])
             {
-                // Check if the hinge angle exceeds the threshold
                 if (Mathf.Abs(hingeJoint.angle) > angleThreshold)
                 {
                     counter++;
-                    leverCounted[i] = true; // Mark the lever as counted
+                    leverCounted[i] = true;
                 }
             }
         }
 
-        // Check if the counter reaches a certain amount
-        if (counter >= 1) // Adjust the number as per your requirement
+        if (counter >= 1)
         {
             EnableLightsAndSun();
             ChangeSkybox();
@@ -84,10 +82,8 @@ public class LightController : MonoBehaviour
 
     private void UpdateCounterText()
     {
-        // Check if the Text component is assigned
         if (counterText != null)
         {
-            // Update the text with the current counter value
             counterText.text = "Counter: " + counter.ToString() + "/3";
         }
         else

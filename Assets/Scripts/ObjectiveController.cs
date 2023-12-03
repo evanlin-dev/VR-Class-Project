@@ -10,17 +10,25 @@ public class ObjectiveController : MonoBehaviour
     public GameObject door2;
 
     public AudioClip leverSound;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     public GameObject[] arrows;
 
     public TextMeshProUGUI counterText;
-    public float angleThreshold = 45f;
+    public float angleThreshold = 55f;
+
+    public GameObject[] monster;
 
     private bool[] leverCounted;
+    private int lastActivatedLeverIndex = -1;
     private int counter = 0;
 
     private void Start()
     {
+        audioSource.gameObject.SetActive(false);
+        for (int i = 0; i < monster.Length; i++)
+        {
+            monster[i].SetActive(false);
+        }
         InitializeLeverCount();
     }
 
@@ -45,15 +53,15 @@ public class ObjectiveController : MonoBehaviour
         {
             GameObject hingeObject = hingeObjects[i];
             HingeJoint hingeJoint = hingeObject.GetComponent<HingeJoint>();
-
             if (hingeJoint != null && !leverCounted[i])
             {
-                // Check if the hinge angle exceeds the threshold
                 if (Mathf.Abs(hingeJoint.angle) > angleThreshold)
                 {
                     counter++;
                     leverCounted[i] = true;
                     arrows[i].SetActive(false);
+
+                    audioSource.gameObject.SetActive(true);
 
                     audioSource.PlayOneShot(leverSound);
 
@@ -61,6 +69,10 @@ public class ObjectiveController : MonoBehaviour
                     if (grabInteractable != null)
                     {
                         grabInteractable.enabled = false;
+                    }
+                    if (counter >= 3)
+                    {
+                        lastActivatedLeverIndex = i;
                     }
                 }
             }
@@ -70,12 +82,22 @@ public class ObjectiveController : MonoBehaviour
         {
             Destroy(door1.gameObject);
             Destroy(door2.gameObject);
+
+            if (lastActivatedLeverIndex >= 0 && lastActivatedLeverIndex < monster.Length)
+            {
+                monster[lastActivatedLeverIndex].SetActive(true);
+            }
         }
     }
 
+
     private void UpdateCounterText()
     {
-        if (counterText != null)
+        if (counter >= 3)
+        {
+            counterText.text = "Escape";
+        }
+        else if (counterText != null)
         {
             counterText.text = "Counter: " + counter.ToString() + "/3";
         }
