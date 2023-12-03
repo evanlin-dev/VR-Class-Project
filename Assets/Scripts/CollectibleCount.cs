@@ -21,7 +21,7 @@ public class CollectibleCount : MonoBehaviour
 
     void OnCollectibleCollected()
     {
-        text.text = (++count).ToString();
+        text.text = "Keys: " + (++count).ToString() + " / 8";
         if (count == 8)
         {
             // When count reaches 8, make the "Finish" object visible

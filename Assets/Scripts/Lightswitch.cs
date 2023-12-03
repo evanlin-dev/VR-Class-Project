@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class lightonoff : MonoBehaviour
 {
-
-    public GameObject txtToDisplay;             //display the UI text
     
     private bool PlayerInZone;                  //check if the player is in trigger
 
@@ -15,7 +13,6 @@ public class lightonoff : MonoBehaviour
     {
 
         PlayerInZone = false;                   //player not in zone       
-        txtToDisplay.SetActive(false);
     }
 
     private void Update()
@@ -32,7 +29,6 @@ public class lightonoff : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")     //if player in zone
         {
-            txtToDisplay.SetActive(true);
             PlayerInZone = true;
         }
      }
@@ -43,7 +39,6 @@ public class lightonoff : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             PlayerInZone = false;
-            txtToDisplay.SetActive(false);
         }
     }
 }
