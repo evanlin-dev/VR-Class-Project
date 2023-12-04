@@ -8,7 +8,7 @@ public class Collectible : MonoBehaviour
     // Update is called once per frame
     public static event Action OnCollected;
 
-    [SerializeField] private AudioSource collection;
+    public AudioSource collection;
     void Update()
     {
         transform.localRotation = Quaternion.Euler(90f, Time.time * 100f, 0);
@@ -18,7 +18,7 @@ public class Collectible : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            collection.Play();
+            AudioSource.PlayClipAtPoint(collection.clip, transform.position);
             OnCollected?.Invoke();
             gameObject.SetActive(false);
         }

@@ -1,44 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class lightonoff : MonoBehaviour
+public class Lightswitch : MonoBehaviour
 {
-    
-    private bool PlayerInZone;                  //check if the player is in trigger
 
-    public GameObject lightorobj;
+    [SerializeField] public GameObject roomLight;
+    public GameObject buttons;
+    public UnityEvent onPress;
+    public UnityEvent onRelease;
+    GameObject presser;
+    AudioSource sound;
+    bool isPressed;
+
 
     private void Start()
     {
 
-        PlayerInZone = false;                   //player not in zone       
+        sound = GetComponent<AudioSource>();
+        isPressed = false;   
     }
 
-    private void Update()
-    {
-        if (PlayerInZone && Input.GetKeyDown(KeyCode.F))           //if in zone and press F key
-        {
-            lightorobj.SetActive(!lightorobj.activeSelf);
-            gameObject.GetComponent<AudioSource>().Play();
-            gameObject.GetComponent<Animator>().Play("switch");
+    private void OnTriggerEnter(Collider other){
+        if(!isPressed){
+            buttons.transform.localPosition = new Vector3(0, 0, 0);
+            onPress.Invoke();
+            sound.Play();
+            isPressed = true;
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")     //if player in zone
-        {
-            PlayerInZone = true;
-        }
-     }
-    
-
-    private void OnTriggerExit(Collider other)     //if player exit zone
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            PlayerInZone = false;
+    private void OnTriggerExit(Collider other){
+        if(other == presser){
+            buttons.transform.localPosition = new Vector3(0, 0.015f, 0);
+            onRelease.Invoke();
+            isPressed = false;
         }
     }
+
+    public void flipSwitch(){
+        roomLight.SetActive(!roomLight.activeSelf);
+    }
+
 }
