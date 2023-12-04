@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class Door : MonoBehaviour {
 	private Animation anim;
 	public float OpenSpeed = 1;
