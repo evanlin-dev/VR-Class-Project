@@ -6566,9 +6566,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 369610246}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce5476abf0f539c4fa1caa0e8d0eeeb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e0c80c4854b9ff4d94ea93af361f322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+  isActive: 0
+  distanceFromCamera: 2
+  yOffset: 0
 --- !u!114 &369610249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10015,11 +10019,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!4 &569605105 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4134505312059479865, guid: 761f95e346f87b44c819fcc6f2d9b294, type: 3}
-  m_PrefabInstance: {fileID: 1546886420}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &570159640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16408,6 +16407,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923841613}
   m_CullTransparentMesh: 1
+--- !u!4 &929025389 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7696548424635294051, guid: 761f95e346f87b44c819fcc6f2d9b294, type: 3}
+  m_PrefabInstance: {fileID: 1546886420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &937955299
 GameObject:
   m_ObjectHideFlags: 0
@@ -29219,7 +29223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073bee68819a7274ca5ab7c874bfcd46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 569605105}
+  player: {fileID: 929025389}
   detectionRange: 1
   heartbeatAudioSource: {fileID: 1430919216}
   minDistance: 2
@@ -29236,6 +29240,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  gameOverMenu: {fileID: 0}
+  isActive: 0
+  hpText: {fileID: 0}
 --- !u!1001 &1449401685
 PrefabInstance:
   m_ObjectHideFlags: 0
