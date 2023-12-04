@@ -1,86 +1,67 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class OpenDoorMaze : MonoBehaviour
+{
+    public bool isOpen = false;
+    public bool canActivate = true;
+    public float activationRange = 2f; // if player distance < activationRange then open door
+
+    public AudioClip openDoor;
+    public AudioClip closeDoor;
+    private AudioSource source;
+    private static OpenDoorMaze currentlyPlayingDoor; // static variable to keep track of the currently playing door
+    void Start()
+    {
+        source = GetComponent<AudioSource>();
+        openDoor = Resources.Load<AudioClip>("open");
+        closeDoor = Resources.Load<AudioClip>("close");
+        source.volume = 0.3f;
+    }
 
 
-public class Door : MonoBehaviour {
-	private Animation anim;
-	public float OpenSpeed = 1;
-	public float CloseSpeed = 1;
-	public bool isAutomatic = false;
-	public bool AutoClose = false;
-	public bool DoubleSidesOpen = false;
-	public string PlayerHeadTag = "MainCamera";
-	public string OpenForwardAnimName = "Door_anim";
-	public string OpenBackwardAnimName = "DoorBack_anim";
-	private string _animName;
-	private bool inTrigger = false;
-	private bool isOpen = false;
-	private Vector3 relativePos;
-	// Use this for initialization
-	void Start () {
-		anim = GetComponent<Animation> ();
-		_animName = anim.clip.name;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (inTrigger == true) {
-			if(Input.GetKeyDown(KeyCode.E) && !isAutomatic){
-				if (!isOpen) {
-					isOpen = true;
-					OpenDoor ();
-				} else {
-					isOpen = false;
-					CloseDoor ();
-				}
-			}
-		}
-	}
-	void OpenDoor(){
-		anim [_animName].speed = 1 * OpenSpeed;
-		anim [_animName].normalizedTime = 0;
-		anim.Play (_animName);
+    void Update()
+    {
+        if (canActivate) // checks if door has permission to be opened
+        {
+            float distance = Vector3.Distance(transform.position, Camera.main.transform.position); // distance between door and player camera
 
-	}
-	void CloseDoor(){
-		anim [_animName].speed = -1 * CloseSpeed;
-		if (anim [_animName].normalizedTime > 0) {
-			anim [_animName].normalizedTime = anim [_animName].normalizedTime;
-		} else {
-			anim [_animName].normalizedTime = 1;
-		}
-		anim.Play (_animName);
-	}
+            if (distance < activationRange)
+            {
+                OpenDoor();
+            }
+            else if (isOpen)
+            {
+                CloseDoor();
+            }
+        }
+    }
 
-	void OnTriggerEnter(Collider other){
-		if(other.GetComponent<Collider>().tag == PlayerHeadTag){
-			if(DoubleSidesOpen){
-			relativePos = gameObject.transform.InverseTransformPoint (other.transform.position);
-			if (relativePos.z > 0) {
-				_animName = OpenForwardAnimName;
-			} else {
-				_animName = OpenBackwardAnimName;
-			}
-			}
-			if (isAutomatic) {
-				OpenDoor ();
-			}
+    void OpenDoor()
+    {
+        if (!isOpen)
+        {
+            if (currentlyPlayingDoor != null && currentlyPlayingDoor != this) // stops two doors from playing sound at the same time
+            {
+                currentlyPlayingDoor.source.Stop();
+            }
+            transform.Rotate(Vector3.up, -90);
+            isOpen = true;
+            source.clip = openDoor;
+            source.Play();
+            currentlyPlayingDoor = this;
+        }
+    }
 
-			inTrigger = true;
-		}
-	}
-	void OnTriggerExit(Collider other){
-		if(other.GetComponent<Collider>().tag == PlayerHeadTag){
-			if (isAutomatic) {
-				CloseDoor ();
-			} else {
-				inTrigger = false;
-			}
-			if (AutoClose && isOpen) {
-				CloseDoor ();
-				inTrigger = false;
-				isOpen = false;
-			}
-		}
-	}
+    void CloseDoor()
+    {
+        if (isOpen)
+        {
+            transform.Rotate(Vector3.up, 90);
+            isOpen = false;
+            source.clip = closeDoor;
+            source.Play();
+        }
+    }
 }
