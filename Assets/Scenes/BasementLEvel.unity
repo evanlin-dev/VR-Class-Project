@@ -29240,9 +29240,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  gameOverMenu: {fileID: 0}
+  gameOverMenu: {fileID: 1605465142}
   isActive: 0
-  hpText: {fileID: 0}
+  hpText: {fileID: 605970503}
 --- !u!1001 &1449401685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34169,7 +34169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1661135547
 Transform:
   m_ObjectHideFlags: 0
