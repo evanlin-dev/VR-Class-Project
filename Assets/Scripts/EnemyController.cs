@@ -87,12 +87,10 @@ public class EnemyController : MonoBehaviour
         if (hp <= 0 && !isActive)
         {
             Transform cameraTransform = Camera.main.transform;
-            Vector3 targetPosition = cameraTransform.position + cameraTransform.forward * distanceFromCamera +
-                                    new Vector3(0, yOffset, 0);
+            Vector3 targetPosition = cameraTransform.position + cameraTransform.forward * distanceFromCamera + new Vector3(0, yOffset, 0);
             gameOverMenu.transform.position = new Vector3(targetPosition.x, cameraTransform.position.y + yOffset, targetPosition.z);
 
-            Quaternion horizontalRotation = Quaternion.Euler(0, cameraTransform.rotation.eulerAngles.y, 0);
-            gameOverMenu.transform.rotation = horizontalRotation;
+            gameOverMenu.transform.rotation = Quaternion.Euler(0, cameraTransform.rotation.eulerAngles.y, 0);
 
             gameOverMenu.SetActive(true);
             isActive = true;
