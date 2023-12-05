@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenDoorMaze : MonoBehaviour
+public class OpenDoorMaz : MonoBehaviour
 {
     public bool isOpen = false;
     public bool canActivate = true;
@@ -11,7 +11,7 @@ public class OpenDoorMaze : MonoBehaviour
     public AudioClip openDoor;
     public AudioClip closeDoor;
     private AudioSource source;
-    private static OpenDoorMaze currentlyPlayingDoor; // static variable to keep track of the currently playing door
+    private static OpenDoorMaz currentlyPlayingDoor; // static variable to keep track of the currently playing door
     void Start()
     {
         source = GetComponent<AudioSource>();

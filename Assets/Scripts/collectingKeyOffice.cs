@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
 
-public class CollectKeyMaze : XRGrabInteractable
+public class CollectKeyOffice : XRGrabInteractable
 {
     private bool isCollected = false;
     public float displayTime = 3f;
