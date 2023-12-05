@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 529b4cd134eaa4244b086b1951fb5384
+<<<<<<< HEAD
+guid: 3e3b68bcf52214f44bad48eb0f8de2d9
+=======
+guid: 8855dba10d4198a4d93d10bc29c3f7a1
+>>>>>>> office
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
