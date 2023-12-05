@@ -17,7 +17,7 @@ public class FootSteps : MonoBehaviour
         source = GetComponent<AudioSource>();
         steps = Resources.Load<AudioClip>("footSteps");
         source.clip = steps;
-        source.volume = 1.2f;
+        source.volume = 1.0f;
         lastPosition = transform.position;
     }
 

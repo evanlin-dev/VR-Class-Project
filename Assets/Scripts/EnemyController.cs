@@ -1,5 +1,9 @@
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using System.Collections;
 
 public class EnemyController : MonoBehaviour
 {
@@ -14,31 +18,47 @@ public class EnemyController : MonoBehaviour
     public AnimationCurve pitchCurve;
     public AnimationCurve volumeCurve;
 
-    private void Start()
+    public GameObject gameOverMenu;
+    private float distanceFromCamera = 2.0f;
+    private float yOffset = 0.0f;
+    public bool isActive;
+
+    private int maxHP;
+    private int hp;
+    public TextMeshProUGUI hpText;
+
+    private float randomAttackThreshold;
+
+    void Start()
     {
         animation = GetComponent<Animation>();
         agent = GetComponent<NavMeshAgent>();
         agent.stoppingDistance = 0;
+        maxHP = 5;
+        hp = 5;
+        gameOverMenu.SetActive(false);
+        heartbeatAudioSource.gameObject.SetActive(false);
+        Time.timeScale = 1;
+        isActive = false;
     }
 
-    private void Update()
+    void Update()
     {
+        UpdateHPText();
         agent.SetDestination(player.position);
 
-        // Calculate the distance between the enemy and the player.
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
         float t = Mathf.InverseLerp(minDistance, maxDistance, distanceToPlayer);
         float pitch = pitchCurve.Evaluate(t);
         float volume = volumeCurve.Evaluate(t);
 
-        // Set the pitch and volume of the heartbeat sound.
         heartbeatAudioSource.pitch = pitch;
         heartbeatAudioSource.volume = volume;
 
-        // Play or stop the heartbeat sound based on distance.
         if (distanceToPlayer <= maxDistance)
         {
+            heartbeatAudioSource.gameObject.SetActive(true);
             if (!heartbeatAudioSource.isPlaying)
             {
                 heartbeatAudioSource.Play();
@@ -52,25 +72,47 @@ public class EnemyController : MonoBehaviour
             }
         }
 
-        // Handle animations as needed.
         if (distanceToPlayer <= detectionRange)
         {
-            float randomValue = Random.Range(0f, 1f);
-            string animationName = (randomValue < 0.5f) ? "Attack1" : "Attack2";
-            animation.CrossFade(animationName, 1f);
-
-            if (!isAttacking)
+            if (hp > 0 && !isAttacking)
             {
-                isAttacking = true;
-                // Implement your attack logic here.
+                StartCoroutine(DelayedAction());
             }
         }
         else
         {
             animation.CrossFade("Run", 1f);
-
-            // Reset the attack state.
             isAttacking = false;
         }
+        if (hp <= 0 && !isActive)
+        {
+            Transform cameraTransform = Camera.main.transform;
+            Vector3 targetPosition = cameraTransform.position + cameraTransform.forward * distanceFromCamera + new Vector3(0, yOffset, 0);
+            gameOverMenu.transform.position = new Vector3(targetPosition.x, cameraTransform.position.y + yOffset, targetPosition.z);
+
+            gameOverMenu.transform.rotation = Quaternion.Euler(0, cameraTransform.rotation.eulerAngles.y, 0);
+
+            gameOverMenu.SetActive(true);
+            isActive = true;
+            Time.timeScale = 0;
+        }
+    }
+
+    IEnumerator DelayedAction()
+    {
+        isAttacking = true;
+        randomAttackThreshold = Random.Range(0f, 1f);
+        string animationName = (randomAttackThreshold < 0.5f) ? "Attack1" : "Attack2";
+        animation.CrossFade(animationName, 1f);
+        hp -= 1;
+
+        yield return new WaitForSeconds(2.5f);
+
+        isAttacking = false;
+    }
+
+    void UpdateHPText()
+    {
+        hpText.text = "HP: " + hp.ToString() + "/" + maxHP.ToString();
     }
 }

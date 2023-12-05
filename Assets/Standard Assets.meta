@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 746a8f6833a55844eaff4ddc9d842c23
+=======
+guid: 39efe8b0a10de62449a6d10273feaa4a
+>>>>>>> maze
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
