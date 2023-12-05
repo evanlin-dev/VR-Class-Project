@@ -33,12 +33,10 @@ public class PauseMenu : MonoBehaviour
         else if (!isActive)
         {
             Transform cameraTransform = Camera.main.transform;
-            Vector3 targetPosition = cameraTransform.position + cameraTransform.forward * distanceFromCamera +
-                                     new Vector3(0, yOffset, 0);
+            Vector3 targetPosition = cameraTransform.position + cameraTransform.forward * distanceFromCamera + new Vector3(0, yOffset, 0);
             pauseMenu.transform.position = new Vector3(targetPosition.x, cameraTransform.position.y + yOffset, targetPosition.z);
 
-            Quaternion horizontalRotation = Quaternion.Euler(0, cameraTransform.rotation.eulerAngles.y, 0);
-            pauseMenu.transform.rotation = horizontalRotation;
+            pauseMenu.transform.rotation = Quaternion.Euler(0, cameraTransform.rotation.eulerAngles.y, 0);
 
             pauseMenu.SetActive(true);
             isActive = true;
