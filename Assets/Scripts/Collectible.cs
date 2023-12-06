@@ -15,7 +15,7 @@ public class Collectible : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Collectible"))
+        if (other.CompareTag("Player"))
         {
             AudioSource.PlayClipAtPoint(collection.clip, transform.position);
             OnCollected?.Invoke();
