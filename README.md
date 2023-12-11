@@ -3,7 +3,7 @@
 Evan Lin, Anik Singha, Adrian Mysliwiec, Josiel Perez
 
 ## About:
-## <a href="latex/Report.pdf"> Full Report Here<a>
+## <a href="LatexReport-VR/Report.pdf"> Full Report Here<a>
 ## <a href="https://www.youtube.com/watch?v=D1E4Bvuo52g&ab_channel=AnikSingha"> Full Demo Video<a>
 
 >### Engine: [Unity 2022.3.8f1](https://unity3d.com/get-unity/download/archive)
